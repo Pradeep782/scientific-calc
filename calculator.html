@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="./calculator.css">
+    <script src="./calculator.js"></script>
+</head>
+
+<body>
+    <h1>Scientific Calculator</h1>
+    <form name="sci-calc">
+         <table class="calculator" cellspacing="0" cellpadding="1">
+           <tr>
+             <td colspan="5"><input id="display_calc" name="display_calc" value="0" size="30" maxlength="26"></td>
+           </tr>
+           <tr>
+             <td><input type="button" class="btnrow1" name="btnrow1" value="C" onclick="this.form.display_calc.value=  0 "></td>
+             <td><input type="button" class="btnrow1" name="btnrow1" value="<--" onclick="deletingChar(this.form.display_calc)"></td>
+             <td><input type="button" class="btnrow1" name="btnrow1" value="=" onclick="if(checkNum(this.form.display_calc.value)) { compute(this.form) }"></td>
+             <td><input type="button" class="btnOpps" name="btnOpps" value="&#960;" onclick="addChar(this.form.display_calc,'3.14159265359')"></td>
+             <td><input type="button" class="bodmas" name="bodmas" value="%" onclick=" percent(this.form.display_calc)"></td>
+           </tr>
+           <tr>
+             <td><input type="button" class="btn_num" name="btn_num" value="7" onclick="addChar(this.form.display_calc, '7')"></td>
+             <td><input type="button" class="btn_num" name="btn_num" value="8" onclick="addChar(this.form.display_calc, '8')"></td>
+             <td><input type="button" class="btn_num" name="btn_num" value="9" onclick="addChar(this.form.display_calc, '9')"></td>
+             <td><input type="button" class="btnOpps" name="btnOpps" value="x&#94;" onclick="if(checkNum(this.form.display_calc.value)) { exp(this.form) }"></td>
+             <td><input type="button" class="bodmas" name="bodmas" value="/" onclick="addChar(this.form.display_calc, '/')"></td>
+           <tr>
+             <td><input type="button" class="btn_num" name="btn_num" value="4" onclick="addChar(this.form.display_calc, '4')"></td>
+             <td><input type="button" class="btn_num" name="btn_num" value="5" onclick="addChar(this.form.display_calc, '5')"></td>
+             <td><input type="button" class="btn_num" name="btn_num" value="6" onclick="addChar(this.form.display_calc, '6')"></td>
+             <td><input type="button" class="btnOpps" name="btnOpps" value="log" onclick="if(checkNum(this.form.display_calc.value)) { log(this.form) }"></td>
+             <td><input type="button" class="bodmas" name="bodmas" value="*" onclick="addChar(this.form.display_calc, '*')"></td>
+           </tr>
+           <tr>
+            
+             <td><input type="button" class="btn_num" name="btn_num" value="1" onclick="addChar(this.form.display_calc, '1')"></td>
+             <td><input type="button" class="btn_num" name="btn_num" value="2" onclick="addChar(this.form.display_calc, '2')"></td>
+             <td><input type="button" class="btn_num" name="btn_num" value="3" onclick="addChar(this.form.display_calc, '3')"></td>
+             <td><input type="button" class="btnOpps" name="btnOpps" value="&radic;" onclick="if(checkNum(this.form.display_calc.value)) { sqrt(this.form) }"></td>
+             <td><input type="button" class="bodmas" name="bodmas" value="-" onclick="addChar(this.form.display_calc, '-')"></td>
+           </tr>
+           <tr>
+             <td><input type="button" class="bodmas" name="bodmas" value="&#177" onclick="changeSign(this.form.display_calc)"></td>
+             <td><input type="button" class="btn_num" name="btnNum_cal" value="0" onclick="addChar(this.form.display_calc, '0')"></td>
+             <td><input type="button" class="bodmas" name="bodmas" value="&#46;" onclick="addChar(this.form.display_calc, '&#46;')"></td>
+             <td><input type="button" class="btnOpps" name="btnOpps" value="x&#50;" onclick="if(checkNum(this.form.display_calc.value)) { square(this.form) }"></td>
+             <td><input type="button" class="bodmas" name="bodmas" value="+" onclick="addChar(this.form.display_calc, '+')"></td>
+           </tr>
+           <tr>
+             <td><input type="button" class="bodmas" name="bodmas" value="(" onclick="addChar(this.form.display_calc, '(')"></td>
+             <td><input type="button" class="bodmas" name="bodmas" value=")" onclick="addChar(this.form.display_calc,')')"></td>
+             <td><input type="button" class="bodmas" name="bodmas" value="cos" onclick="if(checkNum(this.form.display_calc.value)) { cos(this.form) }"></td>
+             <td><input type="button" class="bodmas" name="bodmas" value="sin" onclick="if(checkNum(this.form.display_calc.value)) { sin(this.form) }"></td>
+             <td><input type="button" class="bodmas" name="bodmas" value="tan" onclick="if(checkNum(this.form.display_calc.value)) { tan(this.form) }"></td>
+          </tr>
+         </tabel>
+    </form>
+    <footer>
+      <p> ©  Done by Pradeep Reddy Yedalla on 26/07/2021</p>
+    </footer>
+</body>
+
+</html>
